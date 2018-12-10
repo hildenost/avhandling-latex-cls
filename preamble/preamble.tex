@@ -1,0 +1,44 @@
+
+\usepackage{ifthen}
+\usepackage[%
+% style=numeric-comp,%
+style=nature,%
+date=year,%
+backend=biber,%
+url=false,%
+doi=false,%
+isbn=false,%
+natbib=true,%
+sorting=none,%
+maxbibnames=99,%
+giveninits=true,%
+terseinits=true,%
+% maxcitenames=1%
+]{biblatex}
+
+\usepackage[final]{microtype}
+\usepackage{mdframed}
+
+% For displaying LaTeX source code in
+% the documentation
+\usepackage[final]{listings}
+\lstset{
+	language=[LaTeX]TeX,
+	breaklines=true,
+	%basicstyle=\texttt\scriptsize,
+	keywordstyle=\color{olive},
+	identifierstyle=\color{orange},
+}
+
+\usepackage[rightcaption]{sidecap}
+\usepackage{rotating}
+
+
+\usepackage[symbols, acronym, toc, nopostdot, nonumberlist]{glossaries}
+\makeglossaries
+
+\relpenalty=10000
+\binoppenalty=10000
+
+
+\endinput

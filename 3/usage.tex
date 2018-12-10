@@ -1,0 +1,25 @@
+\chapter{Class usage}
+
+\intro{How to tweak the look of this very chapter introduction/abstract, and how to turn off
+the chapter table of contents.
+Also, a note on the todo-notes is added.}
+
+\section{Chapter abstract and table of contents}
+
+I created the command \lstinline{\intro} for the special formatting of the chapter abstract. It is defined in \texttt{avhandling.cls}, and can of course be tweaked to your liking.
+
+In addition, I added a so-called \emph{minitoc} at the end of this chapter abstract.
+If you'd like to keep the abstract, but get rid of the minitoc, just delete the \lstinline{\chaptertoc} in the \lstinline{\intro} definition in the \texttt{avhandling.cls} file.
+
+The depth of the table of contents is set to 1, that is, just the section headings are included. Changing \textbf{tocdepth} to 2 will include subsections as well.
+
+\section{Todo-notes}
+
+During the writing process, I used todo-notes in the margin to help keep track of comments\todo{Like so}\todofig.
+The package I use, and which is included in this class, is the \textbf{fixme} package\todocite.
+I redefined the commands to be more descriptive of how I would use the notes.
+
+There are 3 commands: \lstinline{\todo}, \lstinline{\todocite}, and \lstinline{\todofig}.
+The \lstinline{\todo} command needs text input in curly braces, like so: \lstinline|\todo\{Remember this!}|\todocite[Perhaps cite the package manual?].
+The other two add by default the text of "citation needed" and "figure wanted".
+If you want to describe the problem more, just write of your heart's content in square brackets like so: \lstinline{\todocite[A very very important paper by a very very important author should deffo be cited here.]}. 

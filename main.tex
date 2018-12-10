@@ -1,0 +1,84 @@
+\documentclass[
+	draft,
+	twoside,
+	%showimages,
+	]{avhandling}
+
+\input{preamble/preamble}
+\input{preamble/mycommands.tex}
+\input{preamble/acronyms.tex}
+%\input{preamble/symbols.tex}
+
+\addbibresource{library.bib}
+
+\title{Nosthesis - a thesis typesetting \LaTeX\ class}
+\author{Hilde Aas Nøst}
+\date{}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRONT MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typically contains
+% - Preface
+% - Acknowledgements
+% - Abstract
+% - Dedication page
+% - List of symbols/abbreviations/etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\include{frontbackmatter/preface}
+\include{frontbackmatter/acknowledgements}
+\include{frontbackmatter/abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLE OF CONTENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The pdf file navigation should include Contents
+\cleardoublepage
+\phantomsection\pdfbookmark{\contentsname}{toc}
+% The star avoids including Contents as an entry to the toc
+\tableofcontents*
+\cleardoublepage
+
+% Uncomment below if you like to include
+%\tableoffigures
+%\tableoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE MAIN BODY
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+% When using include, Latex will cleardoublepage automatically
+% I've organised chapters by folder, but that's not necessary
+% The .tex suffix is not needed
+\include{introduction/introduction}
+\include{2/setup}
+\include{3/usage}
+\include{4/tips}
+\include{conclusion/conclusion}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BACK MATTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Typically contains
+% - Bibliography/References
+% - Appendices
+% - List of acronyms/symbols/etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+ 
+% Bibliography/references
+% Library file is specified in preamble.tex
+\cleardoublepage
+\phantomsection
+\emergencystretch=1em % Trick for eliminating overfull hboxes in references
+\printbibliography[title=References]
+
+% \printglossary[type=symbols,style=long]
+\printglossary[type=\acronymtype,style=long]
+
+\end{document}
