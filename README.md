@@ -5,6 +5,7 @@ Latex class file for thesis writing
 The only files needed for thesis editing is:
 * avhandling.cls (main class file)
 * nature.* (provides the nature biber style)
+
 and if needing the physics package:
 * physics.sty
 * logreq.* (required by physics.sty)
