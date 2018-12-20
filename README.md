@@ -14,6 +14,6 @@ Easy installation is just copying the above-mentioned files to your project fold
 The class can also be uploaded to ShareLatex/OverLeaf.
 
 ## Demo
-The [main.pdf](../blob/master/main.pdf) file shows how [main.tex](../blob/master/main.tex) looks like when compiled.
+The [main.pdf](https://github.com/hildenost/avhandling-latex-cls/blob/master/main.pdf) file shows how [main.tex](https://github.com/hildenost/avhandling-latex-cls/blob/master/main.tex) looks like when compiled.
 
 Good luck with the thesis writing!
